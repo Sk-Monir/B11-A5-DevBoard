@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DevBoard</title>
+    <!-- favicon start -->
+    <link rel="shortcut icon" href="./assets/logo.png" type="image/x-icon">
+    <!-- favicon End -->
+    <!-- Font awesome cdn link start -->
+    <script src="https://kit.fontawesome.com/7a4507e9b3.js" crossorigin="anonymous"></script>
+    <!-- Font awesome cdn link start -->
+    <!-- google font cdn start -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Sora:wght@100..800&display=swap"
+        rel="stylesheet">
+    <!-- google font cdn end -->
+    <!-- tailwind and DaisyUi cdn start -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@5.0.0-beta.8/daisyui.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <!-- tailwind and DaisyUi cdn end -->
+    <!-- Tailwind CSS Configuration start-->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        white: '#ffffff',
+                    },
+                    fontFamily: {
+                        Poppins: 'Poppins',
+                    },
+                }
+            }
+        }
+    </script>
+    <!-- Tailwind CSS Configuration End-->
+</head>
+
+<body class="bg-gray-100 font-Poppins h-fu.l">
+    <!-- header Section Start -->
+    <header class="py-3">
+        <nav class="w-11/12 mx-auto bg-white my-5 p-5 rounded-2xl flex justify-between items-center">
+            <div class="flex items-center gap-2">
+                <img src="assets/logo.png" alt="" srcset="">
+                <h2 class="text-4xl font-light">Dev<span class="font-bold">Board</span></h2>
+            </div>
+            <div class="flex items-center gap-4">
+                <div class="bg-gray-100 rounded-3xl py-2 px-4 flex items-center gap-2">
+                    <span><img src="assets/checkbox.png" alt=""></span>
+                    <span id="totalTask" class="text-3xl font-bold">26</span>
+                </div>
+                <div id="theme-btn" class="cursor-pointer">
+                    <img src="assets/theme-btn.png" alt="">
+                </div>
+            </div>
+        </nav>
+    </header>
+    <!-- header Section Start -->
+
+    <!-- main Section Start-->
+    <main class="pb-10">
+        <section class="grid grid-cols-12 gap-5 w-11/12 mx-auto">
+            <!-- card and tabbar section -->
+            <div class="col-span-9 p-5 rounded-2xl bg-white">
+                <!-- tabbar section -->
+                <div class="grid grid-cols-12 gap-5  mb-5">
+                    <div class="col-span-3 bg-gray-100 rounded-xl p-4 flex items-center gap-2">
+                        <div class="p-3 rounded-full bg-white">
+                            <img src="assets/checkbox.png" alt="">
+                        </div>
+                        <div>
+                            <p class="text-base font-medium">Task Assigned </p>
+                            <h4 class="text-3xl font-bold">0<span id="taskAssign">6</span></h4>
+                        </div>
+                    </div>
+                    <div id="blogs"
+                        class="col-span-6 bg-linear-to-r from-[#3752FD] to-[#9BA8F8] rounded-xl p-4 flex items-center gap-2">
+                        <div><img src="assets/board.png" alt=""></div>
+                        <h4 class="text-2xl font-medium text-white">Discover Something New Today!</h4>
+                    </div>
+                    <div class="col-span-3 bg-gray-100 rounded-xl p-4 flex items-center gap-2">
+                        <div class="p-3 rounded-full bg-white">
+                            <img src="assets/calender.png" alt="">
+                        </div>
+                        <div>
+                            <h4 class="text-xl font-normal"><span id="day">Wed</span>,</h4>
+                            <h4 class="text-xl font-bold"><span id="date">Jul 28 2025</span></h4>
+                        </div>
+                    </div>
+                </div>
+                <!-- hr -->
+                <hr class="border-dashed border-2 border-gray-300">
+                <!-- card section -->
+                <div class="mt-5 grid grid-cols-3 gap-5">
+                    <!-- card-1 -->
+                    <div class="bg-gray-100 rounded-2xl p-5 ">
+                        <p class="rounded-xl bg-white p-2 w-1/3">ShopEase</p>
+                        <h4 class="text-xl font-medium my-3">Fix Mobile Button Issue</h4>
+                        <div class="rounded-xl p-2 bg-white text-gray-400">
+                            <p>Debug using Chrome DevTools, check for overlapping...</p>
+                        </div>
+                        <hr class="border-dashed border border-gray-300 my-3">
+                        <div class="flex items-center gap-2 justify-between">
+                            <div>
+                                <p class="text-sm text-gray-500">Deadline</p>
+                                <p class="text-base font-medium">14 March 2025</p>
+                            </div>
+                            <div>
+                                <button id="card-btn-1" class="btn btn-primary rounded-lg py-2 px-4">Completed</button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- card-2 -->
+                    <div class="bg-gray-100 rounded-2xl p-5 ">
+                        <p class="rounded-xl bg-white p-2 w-1/3">CloudSync</p>
+                        <h4 class="text-xl font-medium my-3">Add Dark Mode</h4>
+                        <div class="rounded-xl p-2 bg-white text-gray-400">
+                            <p>Store the user's preference in localStorage, update CSS....</p>
+                        </div>
+                        <hr class="border-dashed border border-gray-300 my-3">
+                        <div class="flex items-center gap-2 justify-between">
+                            <div>
+                                <p class="text-sm text-gray-500">Deadline</p>
+                                <p class="text-base font-medium">16 March 2025</p>
+                            </div>
+                            <div>
+                                <button id="card-btn" class="btn btn-primary rounded-lg py-2 px-4">Completed</button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- card-3 -->
+                    <div class="bg-gray-100 rounded-2xl p-5 ">
+                        <p class="rounded-xl bg-white p-2 w-1/3">SwiftPay</p>
+                        <h4 class="text-xl font-medium my-3">Optimize Home page </h4>
+                        <div class="rounded-xl p-2 bg-white text-gray-400">
+                            <p>DevTools, check for overlapping elements, works properly....</p>
+                        </div>
+                        <hr class="border-dashed border border-gray-300 my-3">
+                        <div class="flex items-center gap-2 justify-between">
+                            <div>
+                                <p class="text-sm text-gray-500">Deadline</p>
+                                <p class="text-base font-medium">20 March 2025</p>
+                            </div>
+                            <div>
+                                <button id="card-btn" class="btn btn-primary rounded-lg py-2 px-4">Completed</button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- card-4 -->
+                    <div class="bg-gray-100 rounded-2xl p-5 ">
+                        <p class="rounded-xl bg-white p-2 w-1/3">Meta</p>
+                        <h4 class="text-xl font-medium my-3">Add new emoji 🤲</h4>
+                        <div class="rounded-xl p-2 bg-white text-gray-400">
+                            <p>Dynamically, and apply a smooth transition effect.....</p>
+                        </div>
+                        <hr class="border-dashed border border-gray-300 my-3">
+                        <div class="flex items-center gap-2 justify-between">
+                            <div>
+                                <p class="text-sm text-gray-500">Deadline</p>
+                                <p class="text-base font-medium">22 March 2025</p>
+                            </div>
+                            <div>
+                                <button id="card-btn" class="btn btn-primary rounded-lg py-2 px-4">Completed</button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- card-5 -->
+                    <div class="bg-gray-100 rounded-2xl p-5 ">
+                        <p class="rounded-xl bg-white p-2 w-2/4">Google LLC</p>
+                        <h4 class="text-xl font-medium my-3">Integrate OpenAI API</h4>
+                        <div class="rounded-xl p-2 bg-white text-gray-400">
+                            <p>Check for overlapping elements, and ensure onClick works properly
+                                .....</p>
+                        </div>
+                        <hr class="border-dashed border border-gray-300 my-3">
+                        <div class="flex items-center gap-2 justify-between">
+                            <div>
+                                <p class="text-sm text-gray-500">Deadline</p>
+                                <p class="text-base font-medium">24 March 2025</p>
+                            </div>
+                            <div>
+                                <button id="card-btn" class="btn btn-primary rounded-lg py-2 px-4">Completed</button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- card-6 -->
+                    <div class="bg-gray-100 rounded-2xl p-5 ">
+                        <p class="rounded-xl bg-white p-2 w-2/4">Glassdoar</p>
+                        <h4 class="text-xl font-medium my-3">Improve Job searching</h4>
+                        <div class="rounded-xl p-2 bg-white text-gray-400">
+                            <p>Chrome DevTools overlapping ensure works properly.....</p>
+                        </div>
+                        <hr class="border-dashed border border-gray-300 my-3">
+                        <div class="flex items-center gap-2 justify-between">
+                            <div>
+                                <p class="text-sm text-gray-500">Deadline</p>
+                                <p class="text-base font-medium">26 March 2025</p>
+                            </div>
+                            <div>
+                                <button id="card-btn" class="btn btn-primary rounded-lg py-2 px-4">Completed</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- History section -->
+            <div class="col-span-3 p-5 rounded-2xl bg-white">
+                <div class="flex flex-col items-center justify-center gap-5">
+                    <div class="flex items-center gap-3">
+                        <img src="assets/activity.png" alt="">
+                        <h4 class="text-xl font-medium">Activity Log</h4>
+                    </div>
+                    <div>
+                        <button id="clear-all" class="btn btn-primary rounded-lg py-2 px-4">Clear History</button>
+                    </div>
+                </div>
+                <hr class="border-dashed border-2 border-gray-300 my-5">
+                <div id="history-container">
+
+                </div>
+            </div>
+        </section>
+    </main>
+    <!-- main Section Start-->
+    <!-- custom js link start -->
+    <script src="js/utilities.js"></script>
+    <script src="js/script.js"></script>
+    <!-- custom js link start -->
+</body>
+
+</html>
