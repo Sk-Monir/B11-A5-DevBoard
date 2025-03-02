@@ -12,7 +12,7 @@ function makeCompleted(btn, cardTitle) {
         const totalTask = getTextValueById('totalTask');
         const totalTaskAssign = getTextValueById('taskAssign');
 
-        // update total Tast
+        // update total Task
         const totalTaskResult = totalTask + 1;
         document.getElementById('totalTask').innerText = totalTaskResult;
 
@@ -24,19 +24,19 @@ function makeCompleted(btn, cardTitle) {
         const title = document.getElementById(cardTitle).innerText;
         const div = document.createElement('div');
         div.className = 'p-2 mb-2 rounded-xl bg-gray-100';
-        div.innerHTML = `<p class="text-base font-normal p-2 ">You have Complete The Task ${title} ${new Date().toLocaleString()} </p>`
+        div.innerHTML = `<p class="text-base font-normal p-2 ">You have Complete The Task <span class="font-bold">${title}</span>. ${new Date().toLocaleString()} </p>`
         const historyContainer = document.getElementById('history-container');
         historyContainer.insertBefore(div, historyContainer.firstChild);
 
         // show Board Update Success
-        alert('Board Update Success Fully');
+        alert('Board Update Successfully');
 
         // btn disabled after click
         document.getElementById(btn).setAttribute('disabled', 'true');
 
         // show All task 
         if (totalTaskAssign === 1) {
-            alert('Congrates!!! You Have Completed All The Current Task');
+            alert('Congrats !!! You Have Completed All The Current Task');
         }
     });
 };

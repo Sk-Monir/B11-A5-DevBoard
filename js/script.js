@@ -1,4 +1,8 @@
+// Swap html page
 
+document.getElementById('blogs').addEventListener('click', function () {
+    window.location.href = './blogs.html';
+});
 // background Change on button Click 
 document.getElementById('theme-btn').addEventListener('click', function () {
     const color = `#${Math.floor(Math.random() * 16777215).toString(16)}`;
@@ -33,5 +37,5 @@ makeCompleted('card-btn-6', 'title-6');
 
 // Clear all to  history-container
 document.getElementById('clear-all').addEventListener('click', function () {
-    document.getElementById('history-container').innerHTML = ' ';
+    document.getElementById('history-container').innerHTML = '';
 })

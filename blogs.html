@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blogs </title>
+    <!-- favicon start -->
+    <link rel="shortcut icon" href="./assets/logo.png" type="image/x-icon">
+    <!-- favicon End -->
+    <!-- Font awesome cdn link start -->
+    <script src="https://kit.fontawesome.com/7a4507e9b3.js" crossorigin="anonymous"></script>
+    <!-- Font awesome cdn link start -->
+    <!-- google font cdn start -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Sora:wght@100..800&display=swap"
+        rel="stylesheet">
+    <!-- google font cdn end -->
+    <!-- tailwind and DaisyUi cdn start -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@5.0.0-beta.8/daisyui.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <!-- tailwind and DaisyUi cdn end -->
+    <!-- Tailwind CSS Configuration start-->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        white: '#ffffff',
+                    },
+                    fontFamily: {
+                        Poppins: 'Poppins',
+                    },
+                }
+            }
+        }
+    </script>
+    <!-- Tailwind CSS Configuration End-->
+</head>
+
+<body class="bg-gray-100 font-Poppins h-full">
+    <!-- header Section Start -->
+    <header class="py-3">
+        <nav class="w-11/12 mx-auto bg-white my-5 p-5 rounded-2xl flex justify-between items-center">
+            <div class="flex items-center gap-2">
+                <img src="assets/logo.png" alt="" srcset="">
+                <h2 class="text-4xl font-light">Dev<span class="font-bold">Board</span></h2>
+            </div>
+            <div class="flex items-center gap-4">
+                <button id="Back-to-Desk" class="btn btn-primary rounded-lg py-3 px-5">Back to Desk</button>
+            </div>
+        </nav>
+    </header>
+    <!-- header Section Start -->
+
+    <!-- main Section Start-->
+    <main class="pb-7 flex items-center flex-col">
+        <!-- accordion section start -->
+        <div class="join join-vertical w-11/12 bg-white mx-auto rounded-xl p-5 sm:p-10 lg:p-20 z-0">
+
+            <h2 class="text-2xl lg:text-4xl font-bold py-2 lg:py-5 mb-5 text-center">Blogs</h2>
+
+            <div class="collapse collapse-arrow join-item border-base-300 border bg-gray-100 mb-5 rounded-lg">
+                <input type="radio" name="my-accordion-4" checked="checked" />
+                <div class="collapse-title text-xl font-medium">Question-1: What are the different ways to select an
+                    element in the DOM?</div>
+                <div class="collapse-content">
+                    <p>There are multiple ways to select an element in the DOM (Document Object Model) using JavaScript.
+                        Here are the most
+                        common methods:</p>
+                    <p>Selecting Elements in the DOM With Javascript :-<br>
+                        document.getElementById()<br>
+                        document.getElementsByClassName()<br>
+                        document.getElementsByTagName()<br>
+                        document.querySelector() <br>
+                        document.querySelectorAll()</p>
+                </div>
+            </div>
+            <div class="collapse collapse-arrow join-item border-base-300 border bg-gray-100 mb-5 rounded-lg">
+                <input type="radio" name="my-accordion-4" />
+                <div class="collapse-title text-xl font-medium">Question-2: What is the difference between innerHTML,
+                    innerText, and textContent ?</div>
+                <div class="collapse-content">
+                    <p>In JavaScript, "innerHTML" retrieves the complete HTML content within an element, including tags,
+                        while "innerText" only
+                        returns the visible text content of an element, ignoring HTML tags, and "textContent" retrieves
+                        all text content within
+                        an element, including hidden text like script tags, while also preserving whitespace and line
+                        breaks, unlike "innerText"
+                        which may adjust spacing based on rendering rules; essentially, "innerHTML" is for manipulating
+                        the full HTML structure,
+                        "innerText" is for getting the visible text on a page, and "textContent" is for accessing raw
+                        text content without
+                        considering styling or rendering behavior.</p>
+                </div>
+            </div>
+            <div class="collapse collapse-arrow join-item border-base-300 border bg-gray-100 mb-5 rounded-lg">
+                <input type="radio" name="my-accordion-4" />
+                <div class="collapse-title text-xl font-medium">Question-3: What is event delegation in the DOM?</div>
+                <div class="collapse-content">
+                    <p>In the DOM, "event delegation" is a JavaScript design pattern where you attach a single event
+                        listener to a parent
+                        element instead of adding listeners to multiple child elements, allowing you to efficiently
+                        handle events on those child
+                        elements by leveraging the event bubbling mechanism where events propagate from the target
+                        element up the DOM tree to
+                        its parent element; this way, you can identify the specific child element that triggered the
+                        event within the parent's
+                        event handler.</p>
+                </div>
+            </div>
+            <div class="collapse collapse-arrow join-item border-base-300 border bg-gray-100 mb-5 rounded-lg">
+                <input type="radio" name="my-accordion-4" />
+                <div class="collapse-title text-xl font-medium">Question-4: What is event bubbling in the DOM?</div>
+                <div class="collapse-content">
+                    <p>Bubbling in the DOM is an event propagation method. It starts with an event triggering on the
+                        innermost element and then
+                        proceeds to trigger the same event on its parent element and then its parent's parent element
+                        and so on.</p>
+                </div>
+            </div>
+            <div class="collapse collapse-arrow join-item border-base-300 border bg-gray-100 mb-5 rounded-lg">
+                <input type="radio" name="my-accordion-4" />
+                <div class="collapse-title text-xl font-medium">Question-5: How do you create, add, and remove elements
+                    using JavaScript?</div>
+                <div class="collapse-content">
+                    <p>To add, remove, and modify HTML elements using JavaScript, you can use methods like createElement
+                        , appendChild ,
+                        removeChild , and properties like innerHTML and textContent . For example, to add an element,
+                        you can create it using
+                        document. createElement and then append it to a parent element using appendChild</p>
+                </div>
+            </div>
+        </div>
+        <!-- accordion section End -->
+    </main>
+    <!-- main Section Start-->
+    <!-- custom js link start -->
+    <script>
+        document.getElementById('Back-to-Desk').addEventListener('click', function () {
+            window.location.href = './index.html';
+        });
+    </script>
+    <!-- custom js link start -->
+</body>
+
+</html>
